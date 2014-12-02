@@ -5,7 +5,10 @@ node default {
           }
 }
 
-node 'build' inherits default {
+node 'deploy' inherits default {
+  package { "git" :
+        ensure => "latest"
+  }
   package { "openjdk-6-jdk" :
         ensure => "latest"
   }
