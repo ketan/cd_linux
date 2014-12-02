@@ -5,7 +5,7 @@ node default {
           }
 }
 
-node 'deploy' inherits default {
+node 'build' inherits default {
   package { "git" :
         ensure => "latest"
   }
@@ -19,6 +19,9 @@ node 'deploy' inherits default {
         ensure => "latest"
   }
   package { "maven2" :
+        ensure => "latest"
+  }
+  package { "jenkins" :
         ensure => "latest"
   }
 }
