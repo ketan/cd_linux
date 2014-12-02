@@ -26,10 +26,7 @@
         <sleep seconds="2"/>
     </target>
     <target depends="compile" name="test">
-      <fail/>
-
-      <!--
-      <junit printsummary="yes" haltonfailure="yes">
+      <junit printsummary="yes" haltonfailure="yes" fork="true">
         <classpath refid="class.path"/>
         <classpath>
           <pathelement path="classes"/>
@@ -37,6 +34,5 @@
         <formatter type="plain" usefile="false"/>
         <test name="site.BootstrapTest"/>
       </junit>
-      -->
     </target>
 </project>
