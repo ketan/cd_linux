@@ -12,7 +12,7 @@ class Bootstrap {
         Server server = new Server(getPort());
         server.setHandler(new ResourceHandler() {
             {
-                setResour ceBase("static");
+                setResourceBase("static");
             }
             public void handle(String target, Request baseRequest,
                 HttpServletRequest request, HttpServletResponse response)
